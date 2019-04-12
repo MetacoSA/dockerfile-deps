@@ -1,6 +1,6 @@
 # This configuration will automatically create docker images based on conventions
 # For example, if a tag BitcoinCore/0.17.0 is pushed
-# Then on docker hub "btcpayserver/BitcoinCore" will be pushed:
+# Then on docker hub "metacosa/BitcoinCore" will be pushed:
 # - 0.17.0-arm32v7 from BitcoinCore/0.17.0/linuxarm32v7.Dockerfile
 # - 0.17.0-amd64 from BitcoinCore/0.17.0/linuxamd64.Dockerfile
 # - 0.17.0 multi arch image
@@ -30,7 +30,7 @@ jobs:
             NODE_NAME=${CIRCLE_TAG:0:$SEPARATOR-1}
             LATEST_TAG="${CIRCLE_TAG:$SEPARATOR}"
             NODE_VERSION="$LATEST_TAG"
-            DOCKERHUB_REPO="btcpayserver/$NODE_NAME"
+            DOCKERHUB_REPO="metacosa/$NODE_NAME"
             DOCKERHUB_REPO="${DOCKERHUB_REPO,,}"
             DOCKERHUB_DESTINATION="$DOCKERHUB_REPO:$LATEST_TAG-amd64"
             DOCKERHUB_DOCKEFILE="$NODE_NAME/$NODE_VERSION/linuxamd64.Dockerfile"
@@ -57,7 +57,7 @@ jobs:
             NODE_NAME=${CIRCLE_TAG:0:$SEPARATOR-1}
             LATEST_TAG="${CIRCLE_TAG:$SEPARATOR}"
             NODE_VERSION="$LATEST_TAG"
-            DOCKERHUB_REPO="btcpayserver/$NODE_NAME"
+            DOCKERHUB_REPO="metacosa/$NODE_NAME"
             DOCKERHUB_REPO="${DOCKERHUB_REPO,,}"
             DOCKERHUB_DESTINATION="$DOCKERHUB_REPO:$LATEST_TAG-arm64v8"
             DOCKERHUB_DOCKEFILE="$NODE_NAME/$NODE_VERSION/linuxarm64v8.Dockerfile"
@@ -94,7 +94,7 @@ jobs:
             NODE_NAME=${CIRCLE_TAG:0:$SEPARATOR-1}
             LATEST_TAG="${CIRCLE_TAG:$SEPARATOR}"
             NODE_VERSION="$LATEST_TAG"
-            DOCKERHUB_REPO="btcpayserver/$NODE_NAME"
+            DOCKERHUB_REPO="metacosa/$NODE_NAME"
             DOCKERHUB_REPO="${DOCKERHUB_REPO,,}"
             DOCKERHUB_DESTINATION="$DOCKERHUB_REPO:$LATEST_TAG-arm32v7"
             DOCKERHUB_DOCKEFILE="$NODE_NAME/$NODE_VERSION/linuxarm32v7.Dockerfile"
@@ -132,7 +132,7 @@ jobs:
             NODE_NAME=${CIRCLE_TAG:0:$SEPARATOR-1}
             LATEST_TAG="${CIRCLE_TAG:$SEPARATOR}"
             NODE_VERSION="$LATEST_TAG"
-            DOCKERHUB_REPO="btcpayserver/$NODE_NAME"
+            DOCKERHUB_REPO="metacosa/$NODE_NAME"
             DOCKERHUB_REPO="${DOCKERHUB_REPO,,}"
             DOCKERHUB_DESTINATION="$DOCKERHUB_REPO:$LATEST_TAG"
             DOCKERHUB_DOCKEFILE_ARM64="$NODE_NAME/$NODE_VERSION/linuxarm64v8.Dockerfile"
